@@ -1,0 +1,217 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "company": "Material XD Version",
+      "members": [
+        {
+          "name": "Ryan Tompson",
+          "avatar": "../assets/img/teams/team-1.jpg"
+        },
+        {
+          "name": "Romina Hadid",
+          "avatar": "../assets/img/teams/team-2.jpg"
+        },
+        {
+          "name": "Alexander Smith",
+          "avatar": "../assets/img/teams/team-3.jpg"
+        },
+        {
+          "name": "Jessica Doe",
+          "avatar": "../assets/img/teams/team-4.jpg"
+        }
+      ],
+      "budget": "$14,000",
+      "completion": 60,
+      "logo": "../assets/img/small-logos/logo-xd.svg",
+      "image": "../assets/img/home-decor-1.jpg",
+      "type": "Modern",
+      "summary": "As Uber works through a huge amount of internal management turmoil."
+    },
+    {
+      "id": 2,
+      "company": "Fix Platform Errors",
+      "members": [
+        {
+          "name": "Ryan Tompson",
+          "avatar": "../assets/img/teams/team-1.jpg"
+        },
+        {
+          "name": "Romina Hadid",
+          "avatar": "../assets/img/teams/team-2.jpg"
+        },
+        {
+          "name": "Alexander Smith",
+          "avatar": "../assets/img/teams/team-3.jpg"
+        },
+        {
+          "name": "Jessica Doe",
+          "avatar": "../assets/img/teams/team-4.jpg"
+        }
+      ],
+      "budget": "NoSet",
+      "completion": 100,
+      "logo": "../assets/img/small-logos/logo-slack.svg",
+      "image": "../assets/img/home-decor-3.jpg",
+      "type": "Minimalist",
+      "summary": " Different people have different taste, and various types of music."
+    },
+    {
+      "id": 3,
+      "company": "Fix Platform Errors",
+      "members": [
+        {
+          "name": "Ryan Tompson",
+          "avatar": "../assets/img/teams/team-1.jpg"
+        },
+        {
+          "name": "Romina Hadid",
+          "avatar": "../assets/img/teams/team-2.jpg"
+        },
+        {
+          "name": "Alexander Smith",
+          "avatar": "../assets/img/teams/team-3.jpg"
+        },
+        {
+          "name": "Jessica Doe",
+          "avatar": "../assets/img/teams/team-4.jpg"
+        }
+      ],
+      "budget": "NoSet",
+      "completion": 5,
+      "logo": "../assets/img/small-logos/logo-slack.svg",
+      "image": "https://images.unsplash.com/photo-1606744824163-985d376605aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "type": "Gothic",
+      "summary": " Why would anyone pick blue over pink? Pink is obviously a better color."
+    },
+    {
+      "id": 4,
+      "company": "Add Progress Track",
+      "members": [
+        {
+          "name": "Romina Hadid",
+          "avatar": "../assets/img/teams/team-2.jpg"
+        },
+        {
+          "name": "Jessica Doe",
+          "avatar": "../assets/img/teams/team-4.jpg"
+        }
+      ],
+      "budget": "$3,000",
+      "completion": 10,
+      "logo": "../assets/img/small-logos/logo-atlassian.svg",
+      "image": "../assets/img/home-decor-1.jpg",
+      "type": "Modern",
+      "summary": "As Uber works through a huge amount of internal management turmoil."
+    },
+    {
+      "id": 5,
+      "company": "Add Progress Track",
+      "members": [
+        {
+          "name": "Romina Hadid",
+          "avatar": "../assets/img/teams/team-2.jpg"
+        },
+        {
+          "name": "Jessica Doe",
+          "avatar": "../assets/img/teams/team-4.jpg"
+        }
+      ],
+      "budget": "$3,000",
+      "completion": 100,
+      "logo": "../assets/img/small-logos/logo-atlassian.svg",
+      "image": "../assets/img/home-decor-2.jpg",
+      "type": "Modern",
+      "summary": "As Uber works through a huge amount of internal management turmoil."
+    },
+    {
+      "id": 6,
+      "company": "Add Progress Track",
+      "members": [
+        {
+          "name": "Romina Hadid",
+          "avatar": "../assets/img/teams/team-2.jpg"
+        },
+        {
+          "name": "Jessica Doe",
+          "avatar": "../assets/img/teams/team-4.jpg"
+        }
+      ],
+      "budget": "$3,000",
+      "completion": 10,
+      "logo": "../assets/img/small-logos/logo-atlassian.svg",
+      "image": "../assets/img/home-decor-2.jpg",
+      "type": "Modern",
+      "summary": "As Uber works through a huge amount of internal management turmoil."
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "location": "USA",
+      "projects": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "mobile": " (44) 123 1234 123",
+      "password": 123456,
+      "email": "mehdi@gmail.com",
+      "fullName": "Richard Davis",
+      "summary": "Hi, I’m Alec Thompson, Decisions: If you can’t decide,the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)"
+    },
+    {
+      "id": 2,
+      "location": "USA",
+      "projects": [
+        1,
+        2,
+        3
+      ],
+      "mobile": " (44) 123 1234 123",
+      "email": "john@creative-tim.com",
+      "fullName": "John Michael",
+      "password": 123456,
+      "summary": "Hi, I’m Alec Thompson, Decisions: If you can’t decide,the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)"
+    },
+    {
+      "id": 3,
+      "location": "USA",
+      "projects": [
+        1,
+        2,
+        3
+      ],
+      "mobile": " (44) 123 1234 123",
+      "email": "alexa@creative-tim.com",
+      "fullName": "Alexa Liras",
+      "password": 123456,
+      "summary": "Hi, I’m Alec Thompson, Decisions: If you can’t decide,the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)"
+    },
+    {
+      "fullName": "admin",
+      "email": "admin@example.com",
+      "password": "123456",
+      "projects": [
+        1,
+        4,
+        2,
+        6
+      ],
+      "id": 4
+    },
+    {
+      "fullName": "example1",
+      "email": "example1@gmail.com",
+      "password": "aaaaaaaa",
+      "projects": [
+        1,
+        4,
+        2,
+        6
+      ],
+      "id": 5
+    }
+  ]
+}
