@@ -1,5 +1,6 @@
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
+import Setting from "../../components/setting/Setting";
 import Sidebar from "../../components/Sidebar";
 
 export default function Notifications() {
@@ -153,6 +154,7 @@ export default function Notifications() {
       </div>
    <Footer/>
     </div>
+    <Setting/>
   </main>
 </>
   )

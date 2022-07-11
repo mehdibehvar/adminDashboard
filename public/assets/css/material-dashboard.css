@@ -21959,6 +21959,8 @@ body.dark-version {
   z-index: 1020;
 }
 
+
+
 .fixed-plugin .badge {
   border: 1px solid #fff;
   border-radius: 50%;
@@ -23425,7 +23427,6 @@ hr.horizontal.gray-light {
 
 .navbar-vertical.navbar-expand-xs .navbar-collapse {
   display: block;
-  overflow: auto;
   height: calc(100vh - 360px);
 }
 
@@ -24234,7 +24235,6 @@ body:not(.dark-version) .sidenav.bg-transparent .collapse .nav-item .nav-link.ac
     transform: translateX(0);
   }
 }
-
 .navbar-vertical.bg-white {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }

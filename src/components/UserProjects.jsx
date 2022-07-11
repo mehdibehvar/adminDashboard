@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux'
 import {selectProjectsByIds } from '../features/projects/projectSlice';
 import ProjectSummary from './ProjectSummary';
 export default function UserProjects({userProjectIds}) {
-const userProjects=useSelector((state)=>selectProjectsByIds(state,userProjectIds?userProjectIds:[]));
+const userProjects=useSelector((state)=>selectProjectsByIds(state,userProjectIds));
 const userProjectList=userProjects.map(project=><ProjectSummary key={project.id} project={project}/>);
   return (
     <div className="col-12 mt-4">

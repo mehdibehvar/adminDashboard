@@ -1,12 +1,12 @@
-import { useSelector } from "react-redux";
-import { selectAllProjects } from "../../features/projects/projectSlice";
+import { shallowEqual, useSelector } from "react-redux";
+import {selectFilteredProjectsIds } from "../../features/projects/projectSlice";
 import OverView from "../orders-overview/OverView";
 import Project from "./Project";
 import ProjectsHeader from "./ProjectsHeader";
 
 export default function Projects() {
-  const projects=useSelector(selectAllProjects)
-const projectsList=projects.map(project=><Project key={project.id} project={project}/>)
+  const filteredProjectsIds=useSelector(selectFilteredProjectsIds,shallowEqual);
+const projectsList=filteredProjectsIds.map(Id=><Project key={Id} projectId={Id}/>)
   return (
     <div className="row mb-4">
         <div className="col-lg-8 col-md-6 mb-md-0 mb-4">

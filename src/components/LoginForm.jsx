@@ -3,8 +3,15 @@ import {useForm} from "react-hook-form"
 import { useDispatch,useSelector } from "react-redux";
 import { loginError, loginRequest, loginSuccess } from "../features/users/userSlice";
 import { post } from "../utils/httpclient";
+import Loading from "./status/Loading";
+import Error from "./status/Error";
+import { useRef } from 'react';
+
 export default function LoginForm() {
+  const {error}=useSelector(state=>state.userInfo)
     const {register,handleSubmit,formState:{errors}}=useForm();
+    const inputRefEmail=useRef();
+    const inputRefPassword=useRef();
     const dispatch=useDispatch();
     const {loading}=useSelector(state=>state.userInfo);
     const navigate=useNavigate();
@@ -16,20 +23,53 @@ export default function LoginForm() {
         dispatch(loginSuccess(response.user));
         navigate("/",{replace:true});
       } catch (error) {
-      dispatch(loginError(error))
+      dispatch(loginError(error.message))
       }
+    };
+    function handleFocus(e) {
+     const name=e.target.name;
+     if(name==="email"){
+      inputRefEmail.current.classList.add("is-filled");
+     }
+     if(name==="password"){
+      inputRefPassword.current.classList.add("is-filled");
+     }
+   
+      }
+      function handleFocuseOut(e) {
+        const name=e.target.name;
+     if(name==="email"){
+      inputRefEmail.current.classList.add("is-filled");
+     }
+     if(name==="password"){
+      inputRefPassword.current.classList.add("is-filled");
+     }
+        
+      }
+      function handleInputChange(e) {
+        const name=e.target.name;
+        if(name==="email"){
+         inputRefEmail.current.classList.add("is-filled");
+        }
+        if(name==="password"){
+         inputRefPassword.current.classList.add("is-filled");
+        }
+      }
+
+    if(error){
+      return <Error error={error}/>
     }
   return (
- <>   {loading?<p>loading....</p>:<form onSubmit={handleSubmit(handleLogin)}  className="text-start">
- <div className="input-group input-group-outline my-3">
+ <>   {loading?<Loading customStyle={"signin-loader"}/>:<form onSubmit={handleSubmit(handleLogin)}  className="text-start">
+ <div ref={inputRefEmail} className="input-group input-group-outline my-3">
    <label className="form-label">Email</label>
-   <input {...register("email",{required:true,pattern:/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/})} className="form-control"/>
+   <input onChange={(e)=>handleInputChange(e)} onBlur={(e)=>handleFocuseOut(e)}  onFocus={(e)=>handleFocus(e)} {...register("email",{required:true,pattern:/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/})} className="form-control"/>
    <span className="text-danger ">{errors.email?.type==="required"&& "email is required"}</span>
    <span className="text-danger ">{errors.email?.type==="pattern"&& "email format is wrong"}</span>
  </div>
- <div className="input-group input-group-outline mb-3">
+ <div ref={inputRefPassword} className="input-group input-group-outline mb-3">
    <label className="form-label">Password</label>
-   <input {...register("password",{required:true})} className="form-control"/>
+   <input onChange={(e)=>handleInputChange(e)} onBlur={(e)=>handleFocuseOut(e)}  onFocus={(e)=>handleFocus(e)} {...register("password",{required:true})} className="form-control"/>
 <span className="text-danger">{errors.password?.type==="required"&& "password is neccessary"}</span>
  </div>
  <div className="form-check form-switch d-flex align-items-center mb-3">

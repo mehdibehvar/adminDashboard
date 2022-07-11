@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
+import { selectprojectById } from "../../features/projects/projectSlice";
 import Member from "./Member";
 
-export default function Project({project}) {
+export default function Project({projectId}) {
+  const project=useSelector(state=>selectprojectById(state,projectId));
     const {company,logo,members,budget,completion}=project;
     const membersList=members.map(member=><Member key={member.name} member={member}/>)
   return (  <tr>

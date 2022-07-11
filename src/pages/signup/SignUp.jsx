@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {useNavigate} from "react-router-dom"
 import { loginError, loginRequest, loginSuccess } from "../../features/users/userSlice";
 import { post } from "../../utils/httpclient";
+import Loading from "../../components/status/Loading";
 export default function SignUp() {
   const {loading}=useSelector(state=>state.userInfo)
   const navigate=useNavigate()
@@ -41,7 +42,7 @@ export default function SignUp() {
                   <p className="mb-0">Enter your email and password to register</p>
                 </div>
                 <div className="card-body">
-                  {loading?<div><p className="text-success">loading ....</p></div>:<><form onSubmit={handleSubmit(handleSignUp)}>
+                  {loading?<Loading customStyle={"signin-loader"}/>:<><form onSubmit={handleSubmit(handleSignUp)}>
                       <span className="text-danger m-0">{errors.fullName?.type==="required"&&"name is neccessary"}</span>
                     <div className="input-group input-group-outline mb-3">
                       <label className="form-label">fullName</label>
