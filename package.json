@@ -29,7 +29,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test", 
     "eject": "react-scripts eject",
-    "server": "json-server --watch ./mock-api/db.json --port 6060 --delay",
+    "server": "json-server --watch ./mock-api/db.json --port 6060",
     "dev": "concurrently \"npm start\" \"npm run server\""
   },
   "eslintConfig": {

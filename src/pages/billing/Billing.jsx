@@ -38,7 +38,7 @@ if(status==="pending"&&!cards){
          <PaymentMethod/>
           </div>
         </div>
-       <Invoices/>
+       <Invoices cards={cards}/>
       </div>
       <div className="row">
      <BillingInfo/>

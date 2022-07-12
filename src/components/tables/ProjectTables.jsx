@@ -15,7 +15,7 @@ export default function ProjectTables() {
           </div>
         </div>
         <div className="card-body px-0 pb-2">
-          <div className="table-responsive p-0">
+          <div className="table-responsive p-0 overflow-x-visible">
             <table className="table align-items-center justify-content-center mb-0">
               <thead>
                 <tr>

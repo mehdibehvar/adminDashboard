@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './App';
 import './index.scss';
-import { fetchProjects } from './features/projects/projectSlice';
-store.dispatch(fetchProjects())
+import { fetchChartsData } from './features/charts/chartsSlice';
+store.dispatch(fetchChartsData())
 const container = document.getElementById('root');
 const root = createRoot(container);
 

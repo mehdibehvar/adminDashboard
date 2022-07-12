@@ -22,7 +22,8 @@
         }
       ],
       "budget": "$14,000",
-      "completion": 60,
+      "status": "cancel",
+      "completion": 100,
       "logo": "../assets/img/small-logos/logo-xd.svg",
       "image": "../assets/img/home-decor-1.jpg",
       "type": "Modern",
@@ -50,7 +51,8 @@
         }
       ],
       "budget": "NoSet",
-      "completion": 100,
+      "status": "working",
+      "completion": 10,
       "logo": "../assets/img/small-logos/logo-slack.svg",
       "image": "../assets/img/home-decor-3.jpg",
       "type": "Minimalist",
@@ -78,7 +80,8 @@
         }
       ],
       "budget": "NoSet",
-      "completion": 5,
+      "status": "doned",
+      "completion": 75,
       "logo": "../assets/img/small-logos/logo-slack.svg",
       "image": "https://images.unsplash.com/photo-1606744824163-985d376605aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "type": "Gothic",
@@ -98,7 +101,8 @@
         }
       ],
       "budget": "$3,000",
-      "completion": 10,
+      "status": "cancel",
+      "completion": 100,
       "logo": "../assets/img/small-logos/logo-atlassian.svg",
       "image": "../assets/img/home-decor-1.jpg",
       "type": "Modern",
@@ -118,6 +122,7 @@
         }
       ],
       "budget": "$3,000",
+      "status": "working",
       "completion": 100,
       "logo": "../assets/img/small-logos/logo-atlassian.svg",
       "image": "../assets/img/home-decor-2.jpg",
@@ -138,6 +143,7 @@
         }
       ],
       "budget": "$3,000",
+      "status": "doned",
       "completion": 10,
       "logo": "../assets/img/small-logos/logo-atlassian.svg",
       "image": "../assets/img/home-decor-2.jpg",
@@ -248,6 +254,30 @@
         6
       ],
       "id": 8
+    },
+    {
+      "fullName": "example3",
+      "email": "example3@gmail.com",
+      "password": "123567",
+      "projects": [
+        1,
+        4,
+        2,
+        6
+      ],
+      "id": 9
+    },
+    {
+      "fullName": "مهدی بهور",
+      "email": "example1@gmail.com",
+      "password": "aaaaaaaa",
+      "projects": [
+        1,
+        4,
+        2,
+        6
+      ],
+      "id": 10
     }
   ],
   "authors": [
@@ -302,47 +332,192 @@
       "employed": "19/09/17"
     }
   ],
-  "cards":[
+  "cards": [
     {
-    "id":1,
-    "cardNumber":"6037444469763073",
-    "cardHolder":"Jack Peterson",
-    "expires":"11/22",
-    "logo":"../assets/img/logos/mastercard.png",
-    "image":"../assets/img/illustrations/pattern-tree.svg",
-    "salary":"+$2000",
-    "paypal":"$455.00"
-  },
+      "id": 1,
+      "cardNumber": "6037444469763073",
+      "cardHolder": "Jack Peterson",
+      "expires": "11/22",
+      "logo": "../assets/img/logos/mastercard.png",
+      "image": "../assets/img/illustrations/pattern-tree.svg",
+      "salary": "+$2000",
+      "paypal": "$455.00",
+      "invoices": [
+        {
+          "date": "March, 01, 2020",
+          "serial": "#MS-415641",
+          "price": "$1800",
+          "pdf": ""
+        },
+        {
+          "date": "February, 10, 2021",
+          "serial": "#MS-415642",
+          "price": "$180",
+          "pdf": ""
+        },
+        {
+          "date": "April, 05, 2020",
+          "serial": "#MS-415643",
+          "price": "$130",
+          "pdf": ""
+        },
+        {
+          "date": "March, 01, 2020",
+          "serial": "#MS-415644",
+          "price": "$580",
+          "pdf": ""
+        },
+        {
+          "date": "June, 25, 2019",
+          "serial": "#MS-415645",
+          "price": "$180",
+          "pdf": ""
+        },
+        {
+          "date": "March, 01, 2020",
+          "serial": "#MS-415646",
+          "price": "$770",
+          "pdf": ""
+        },
+        {
+          "date": "March, 01, 2019",
+          "serial": "#MS-415647",
+          "price": "$18",
+          "pdf": ""
+        }
+      ]
+    }
+  ],
+  "billing": [
     {
-    "id":2,
-    "cardNumber":"603744446976606",
-    "cardHolder":"mehdi behvar",
-    "expires":"11/22",
-    "logo":"../assets/img/logos/mastercard.png",
-    "image":"../assets/img/illustrations/pattern-tree.svg",
-    "salary":"+$2000",
-    "paypal":"$455.00"
-   
-  }
-],
-"billing":[
-  {"id":1,
-  "fullName":"mehdi behvar",
-    "CompanyName":"Viking Burrito",
-    "EmailAddress":"lucas@stone-tech.com",
-    "VATNumber":" FRB1235476"
-  },
-  {"id":2,
-  "fullName":"mehdi behvar",
-    "CompanyName":"Stone Tech Zone",
-    "EmailAddress":"lucas@stone-tech.com",
-    "VATNumber":" FRB1235476"
-  },
-  {"id":3,
-  "fullName":"mehdi behvar",
-    "CompanyName":"Fiber Notion",
-    "EmailAddress":"lucas@stone-tech.com",
-    "VATNumber":" FRB1235476"
-  }
-]
+      "id": 1,
+      "fullName": "mehdi behvar",
+      "CompanyName": "Viking Burrito",
+      "EmailAddress": "lucas@stone-tech.com",
+      "VATNumber": " FRB1235476"
+    },
+    {
+      "id": 2,
+      "fullName": "mehdi behvar",
+      "CompanyName": "Stone Tech Zone",
+      "EmailAddress": "lucas@stone-tech.com",
+      "VATNumber": " FRB1235476"
+    },
+    {
+      "id": 3,
+      "fullName": "mehdi behvar",
+      "CompanyName": "Fiber Notion",
+      "EmailAddress": "lucas@stone-tech.com",
+      "VATNumber": " FRB1235476"
+    }
+  ],
+  "charts": [
+    {
+      "labels": [
+        "M",
+        "T",
+        "W",
+        "T",
+        "F",
+        "S",
+        "S"
+      ],
+      "datasets": [
+        {
+          "label": "Sales",
+          "tension": 0.4,
+          "borderWidth": 0,
+          "borderRadius": 4,
+          "borderSkipped": false,
+          "backgroundColor": "rgba(255, 255, 255, .8)",
+          "data": [
+            50,
+            20,
+            10,
+            22,
+            50,
+            10,
+            40
+          ],
+          "maxBarThickness": 6
+        }
+      ]
+    },
+    {
+      "labels": [
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ],
+      "datasets": [
+        {
+          "label": "Mobile apps",
+          "tension": 0,
+          "pointRadius": 5,
+          "pointBackgroundColor": "rgba(255, 255, 255, .8)",
+          "pointBorderColor": "transparent",
+          "borderColor": "rgba(255, 255, 255, .8)",
+          "borderWidth": 4,
+          "backgroundColor": "transparent",
+          "fill": true,
+          "data": [
+            50,
+            40,
+            300,
+            320,
+            500,
+            350,
+            200,
+            230,
+            500
+          ],
+          "maxBarThickness": 6
+        }
+      ]
+    },
+    {
+      "labels": [
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ],
+      "datasets": [
+        {
+          "label": "Mobile apps",
+          "tension": 0,
+          "pointRadius": 5,
+          "pointBackgroundColor": "rgba(255, 255, 255, .8)",
+          "pointBorderColor": "transparent",
+          "borderColor": "rgba(255, 255, 255, .8)",
+          "borderWidth": 4,
+          "backgroundColor": "transparent",
+          "fill": true,
+          "data": [
+            50,
+            40,
+            300,
+            220,
+            500,
+            250,
+            400,
+            230,
+            500
+          ],
+          "maxBarThickness": 6
+        }
+      ]
+    }
+  ]
 }

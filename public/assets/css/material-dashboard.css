@@ -5183,7 +5183,6 @@ fieldset:disabled .btn {
   border-bottom-right-radius: var(--bs-card-inner-border-radius);
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
-
 .card>.card-header+.list-group,
 .card>.list-group+.card-footer {
   border-top: 0;

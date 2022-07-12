@@ -8,6 +8,8 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import { useSelector } from 'react-redux';
+import Loading from '../status/Loading';
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -17,20 +19,8 @@ ChartJS.register(
   Legend
 );
 export default function VeiwChart() {
-  const     data= {
-    labels: ["M", "T", "W", "T", "F", "S", "S"],
-    datasets: [{
-      label: "Sales",
-      tension: 0.4,
-      borderWidth: 0,
-      borderRadius: 4,
-      borderSkipped: false,
-      backgroundColor: "rgba(255, 255, 255, .8)",
-      data: [50, 20, 10, 22, 50, 10, 40],
-      maxBarThickness: 6
-    }, ],
-  };
-
+  const {chartsData,status}=useSelector(state=>state.charts);
+const data=chartsData[0];
   const  options= {
     responsive: true,
     maintainAspectRatio: false,
@@ -92,6 +82,9 @@ export default function VeiwChart() {
       },
     },
   };
+if(status==="pending"){
+  return <Loading/>
+}
   return (
   <>
      <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">

@@ -4,7 +4,8 @@ import {
   createAsyncThunk,
   createSelector,
 } from "@reduxjs/toolkit";
-import { get } from "../../utils/httpclient/HttpClient";
+import { get, patch } from "../../utils/httpclient/HttpClient";
+/////create asyncthunk///
 export const fetchProjects = createAsyncThunk(
   "projects/fetchprojects",
   async () => {
@@ -13,6 +14,15 @@ export const fetchProjects = createAsyncThunk(
     return response;
   }
 );
+export const changeStatus=createAsyncThunk(
+  "projects/changeProjectStatus",
+  async ({projectId,newStatus,newCompletion},thunkAPI)=>{
+     return await patch(`projects/${projectId}`,{
+      status:newStatus,
+      completion:newCompletion
+    });
+  }
+)
 /////createEntity Adapter////////
 const projectsAdapter = createEntityAdapter({
   selectId: (project) => project.id,
@@ -32,10 +42,11 @@ export const selectProjectsByIds = createSelector(
 const initialState = projectsAdapter.getInitialState({
   status: "idle",
 });
+////create slice////////////////////////////
 const projectsSlice = createSlice({
   name: "projects",
   initialState,
-  reducers: {},
+  reducers:{},
   extraReducers: (builder) => {
     builder
       .addCase(fetchProjects.pending, (state, action) => {
@@ -47,7 +58,18 @@ const projectsSlice = createSlice({
       })
       .addCase(fetchProjects.rejected, (state, action) => {
         state.status = "rejected";
-      });
+      })
+      .addCase(changeStatus.pending,(state,action)=>{
+        state.status="pending";
+      })
+      .addCase(changeStatus.fulfilled,(state,action)=>{
+        const {id,status,completion}=action.payload;
+        state.entities[id].status=status;
+        state.entities[id].completion=completion
+      })
+      .addCase(changeStatus.rejected,(state)=>{
+        state.status="rejected";
+      })
   },
 });
 export default projectsSlice.reducer;

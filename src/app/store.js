@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import authorSlice from '../features/authors/authorSlice';
 import billingSlice from '../features/billingInfo/billingInfoSlice';
 import cardSlice from '../features/cards/cardSlice';
+import chartsSlice from '../features/charts/chartsSlice';
 import filterSlice from '../features/filter/filterSlice';
 import projectSlice from '../features/projects/projectSlice';
 import styleSlice from '../features/style/StyleSlice';
@@ -14,6 +15,7 @@ export const store = configureStore({
  cards:cardSlice,
  billings:billingSlice,
  filters:filterSlice,
- styles:styleSlice
+ styles:styleSlice,
+ charts:chartsSlice
   },
 });

@@ -7,6 +7,7 @@ import { useRef } from 'react';
 export default function Navbar() {
 const inputRef=useRef()
   const userInfo=useSelector(state=>state.userInfo);
+  const {navbarFixed}=useSelector(state=>state.styles)
   const {fullName}=useParams();
   const page=useLocation().pathname;
   const dispatch=useDispatch();
@@ -33,7 +34,7 @@ function handleFocus() {
     inputRef.current.classList.add("is-filled");
   }
   return (
-    <nav className="navbar  navbar-main navbar-expand px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+    <nav className={`navbar  navbar-main navbar-expand px-0 mx-4 shadow-none border-radius-xl ${navbarFixed?"position-sticky blur shadow-blur mt-4 left-auto top-1 z-index-sticky":null}`} id="navbarBlur" data-scroll="true">
       <div className="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
@@ -54,7 +55,7 @@ function handleFocus() {
               {info?<Link to="/" onClick={handleLogout}>
                 <i className="fa fa-user me-sm-1"></i>
                 <span className="d-sm-inline d-none">Sign out</span>
-              </Link>: <Link className="nav-link text-body font-weight-bold px-0" to="signin">
+              </Link>: <Link className="nav-link text-body font-weight-bold px-0" to="/signin">
               <i className="fa fa-user me-sm-1"></i>
                 <span className="d-sm-inline d-none">Sign In</span>
               </Link>}
