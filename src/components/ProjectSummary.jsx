@@ -1,20 +1,21 @@
 import React from 'react'
+import { Link, Outlet, useParams } from 'react-router-dom';
 import Member from './projects/Member';
 
 export default function ProjectSummary({project}) {
-  const {members}=project;
+  const {members,id}=project;
   const membersList=members.map(member=><Member key={member.name} member={member}/>)
   return (
     <div className="col-xl-3 col-md-6 mb-xl-0 mb-4">
     <div className="card card-blog card-plain">
       <div className="card-header p-0 mt-n4 mx-3">
-        <a className="d-block shadow-xl border-radius-xl">
+        <a href='/' className="d-block shadow-xl border-radius-xl">
           <img src={`${project.image}`} alt="img-blur-shadow" className="img-fluid shadow border-radius-xl"/>
         </a>
       </div>
       <div className="card-body p-3">
         <p className="mb-0 text-sm">{project.company}</p>
-        <a href="javascript:;">
+        <a href="/">
           <h5>
            {project.type}
           </h5>
@@ -23,13 +24,18 @@ export default function ProjectSummary({project}) {
           {project.summary}
         </p>
         <div className="d-flex align-items-center justify-content-between">
-          <button type="button" className="btn btn-outline-primary btn-sm mb-0">View Project</button>
+          <button type="button" className="btn btn-outline-primary btn-sm mb-0">
+          <Link to={`/profile/${id}`}>
+            View Project
+          </Link>
+            </button>
           <div className="avatar-group mt-2">
        {membersList}
           </div>
         </div>
       </div>
     </div>
+    <Outlet />
   </div>
   )
 }

@@ -31,7 +31,7 @@ export default function Profile() {
         console.log(error);
       }
     }
-  }, []);
+  }, [info]);
   if(loading){
     return <Loading/>
   }

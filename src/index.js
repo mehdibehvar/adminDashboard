@@ -5,6 +5,8 @@ import { store } from './app/store';
 import App from './App';
 import './index.scss';
 import { fetchChartsData } from './features/charts/chartsSlice';
+import { fetchProjects } from './features/projects/projectSlice';
+store.dispatch(fetchProjects())
 store.dispatch(fetchChartsData())
 const container = document.getElementById('root');
 const root = createRoot(container);

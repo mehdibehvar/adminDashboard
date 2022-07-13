@@ -11,7 +11,6 @@ import Setting from "../../components/setting/Setting"
 
 
 export default function Dashboard() {
-  const dispatch=useDispatch();
   const { status } = useSelector((state) => state.projects);
 
   if(status==="rejected"){

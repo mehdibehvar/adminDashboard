@@ -1,4 +1,35 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "location": "yasuj-pataveh",
+      "projects": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "mobile": "0990945444",
+      "password": 123456,
+      "email": "mehdi@gmail.com",
+      "fullName": "مهدی بهور",
+      "summary": "hi i am mehdi behvar i am 34 years old and i am react develoaper."
+    },
+    {
+      "id": 2,
+      "location": "yasuj",
+      "projects": [
+        1,
+        2,
+        3
+      ],
+      "mobile": " (44) 123 1234 888",
+      "email": "admin@gmail.com",
+      "fullName": "admin admin",
+      "password": 123456,
+      "summary": "Hi, I’m Alec Thompson, Decisions: If you can’t decide,the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)"
+    }
+  ],
   "projects": [
     {
       "id": 1,
@@ -80,7 +111,7 @@
         }
       ],
       "budget": "NoSet",
-      "status": "doned",
+      "status": "working",
       "completion": 75,
       "logo": "../assets/img/small-logos/logo-slack.svg",
       "image": "https://images.unsplash.com/photo-1606744824163-985d376605aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
@@ -101,7 +132,7 @@
         }
       ],
       "budget": "$3,000",
-      "status": "cancel",
+      "status": "doned",
       "completion": 100,
       "logo": "../assets/img/small-logos/logo-atlassian.svg",
       "image": "../assets/img/home-decor-1.jpg",
@@ -122,7 +153,7 @@
         }
       ],
       "budget": "$3,000",
-      "status": "working",
+      "status": "doned",
       "completion": 100,
       "logo": "../assets/img/small-logos/logo-atlassian.svg",
       "image": "../assets/img/home-decor-2.jpg",
@@ -143,141 +174,12 @@
         }
       ],
       "budget": "$3,000",
-      "status": "doned",
+      "status": "working",
       "completion": 10,
       "logo": "../assets/img/small-logos/logo-atlassian.svg",
       "image": "../assets/img/home-decor-2.jpg",
       "type": "Modern",
       "summary": "As Uber works through a huge amount of internal management turmoil."
-    }
-  ],
-  "users": [
-    {
-      "id": 1,
-      "location": "USA",
-      "projects": [
-        1,
-        2,
-        3,
-        6
-      ],
-      "mobile": " (44) 123 1234 123",
-      "password": 123456,
-      "email": "mehdi@gmail.com",
-      "fullName": "Richard Davis",
-      "summary": "Hi, I’m Alec Thompson, Decisions: If you can’t decide,the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)"
-    },
-    {
-      "id": 2,
-      "location": "USA",
-      "projects": [
-        1,
-        2,
-        3
-      ],
-      "mobile": " (44) 123 1234 123",
-      "email": "john@creative-tim.com",
-      "fullName": "John Michael",
-      "password": 123456,
-      "summary": "Hi, I’m Alec Thompson, Decisions: If you can’t decide,the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)"
-    },
-    {
-      "id": 3,
-      "location": "USA",
-      "projects": [
-        1,
-        2,
-        3
-      ],
-      "mobile": " (44) 123 1234 123",
-      "email": "alexa@creative-tim.com",
-      "fullName": "Alexa Liras",
-      "password": 123456,
-      "summary": "Hi, I’m Alec Thompson, Decisions: If you can’t decide,the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)"
-    },
-    {
-      "fullName": "admin",
-      "email": "admin@example.com",
-      "password": "123456",
-      "projects": [
-        1,
-        4,
-        2,
-        6
-      ],
-      "id": 4
-    },
-    {
-      "fullName": "example1",
-      "email": "example1@gmail.com",
-      "password": "aaaaaaaa",
-      "projects": [
-        1,
-        4,
-        2,
-        6
-      ],
-      "id": 5
-    },
-    {
-      "fullName": "example2",
-      "email": "example2@gmail.com",
-      "password": "aaaaaaaa",
-      "projects": [
-        1,
-        4,
-        2,
-        6
-      ],
-      "id": 6
-    },
-    {
-      "fullName": "مهدی بهور",
-      "email": "example1@gmail.com",
-      "password": "aaaaaaaa",
-      "projects": [
-        1,
-        4,
-        2,
-        6
-      ],
-      "id": 7
-    },
-    {
-      "fullName": "lifm",
-      "email": "example1@gmail.com",
-      "password": "aaaaaaaa",
-      "projects": [
-        1,
-        4,
-        2,
-        6
-      ],
-      "id": 8
-    },
-    {
-      "fullName": "example3",
-      "email": "example3@gmail.com",
-      "password": "123567",
-      "projects": [
-        1,
-        4,
-        2,
-        6
-      ],
-      "id": 9
-    },
-    {
-      "fullName": "مهدی بهور",
-      "email": "example1@gmail.com",
-      "password": "aaaaaaaa",
-      "projects": [
-        1,
-        4,
-        2,
-        6
-      ],
-      "id": 10
     }
   ],
   "authors": [

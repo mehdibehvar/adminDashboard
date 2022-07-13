@@ -1,3 +1,4 @@
+import ProfileModal from "./ProfileModal";
 
 export default function ProfileInfo({profileInfo}) {
   return (
@@ -9,9 +10,13 @@ export default function ProfileInfo({profileInfo}) {
             <h6 className="mb-0">Profile Information</h6>
           </div>
           <div className="col-md-4 text-end">
-            <a href="/">
-              <i className="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile"></i>
-            </a>
+            {/* <!-- Button trigger modal --> */}
+<button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+<i className="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile"></i>
+</button>
+
+{/* <!-- Modal --> */}
+<ProfileModal profileInfo={profileInfo}/>
           </div>
         </div>
       </div>

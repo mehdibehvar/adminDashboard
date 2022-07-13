@@ -11,7 +11,7 @@ const textColor=sidenavBg==="bg-gradient-dark"?"white":"dark";
   {text:"Tables",path:"/tables",icon:"table_view"},
   {text:"Billing",path:"/billing",icon:"receipt_long"},
   {text:"Notifications",path:"/notifications",icon:"notifications"},
-  {text:"Profile",path:`/${info?info.name:"signin"}`,icon:"person"},
+  {text:"Profile",path:`/${info?"profile":"signin"}`,icon:"person"},
   {text:"Sign In",path:`${!info?"/signin":''}`,icon:"login"},
   {text:"Sign Up",path:"/signup",icon:"assignment"},
 ]

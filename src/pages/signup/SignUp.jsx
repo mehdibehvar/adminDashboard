@@ -42,7 +42,8 @@ export default function SignUp() {
                   <p className="mb-0">Enter your email and password to register</p>
                 </div>
                 <div className="card-body">
-                  {loading?<Loading customStyle={"signin-loader"}/>:<><form onSubmit={handleSubmit(handleSignUp)}>
+                  {loading?<Loading customStyle={"signin-loader"}/>:<>
+                  <form onSubmit={handleSubmit(handleSignUp)}>
                       <span className="text-danger m-0">{errors.fullName?.type==="required"&&"name is neccessary"}</span>
                     <div className="input-group input-group-outline mb-3">
                       <label className="form-label">fullName</label>

@@ -10,10 +10,12 @@ import Notifications from "./pages/notifications/Notifications";
 import Tables from "./pages/tables/Tables";
 import { useDispatch } from "react-redux";
 import { fetchProjects } from './features/projects/projectSlice';
+import SingleProject from "./pages/singleProject/SingleProject";
+
 function App() {
   const dispatch=useDispatch()
   useEffect(() => {
-    dispatch(fetchProjects());
+
     document.body.classList.add("g-sidenav-show", "bg-gray-200");
   }, []);
 
@@ -24,10 +26,12 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="signin" element={<SignIn />} />
           <Route path="signup" element={<SignUp />} />
-          <Route path=":fullName" element={<Profile />} />
+          <Route path="profile" element={<Profile />}/>
+          <Route path="profile/:projectId" element={<SingleProject/>}/>
           <Route path="billing" element={<Billing />} />
           <Route path="notifications" element={<Notifications />} />
           <Route path="tables" element={<Tables />} />
+          
         </Route>
       </Routes>
     </BrowserRouter>
