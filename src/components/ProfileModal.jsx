@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
@@ -15,17 +16,35 @@ export default function ProfileModal({ profileInfo }) {
     setValue("fullName", fullName);
   }, []);
   ////edit profile info by a patch request/////
-  const handleEditProfile = (inputs) => {
-    const { summary, location, mobile, fullName } = inputs;
-    dispatch(
-      editProfile({
-        userId: id,
-        summary,
-        location,
-        mobile,
-        fullName,
-      })
-    );
+  const handleEditProfile = (inputs,e) => {
+    e.preventDefault();
+    const { summary, location, mobile, fullName, avatar } = inputs;
+    const data = new FormData();
+
+    for(let i = 0; i < avatar.length; i++) {
+        data.append('file', avatar[i]);
+    }
+    axios.post('http://localhost:8000/upload', data)
+        .then((response) => {
+          const path=response.data[0].path;
+          const publicPath=path.slice(7)
+      dispatch(
+        editProfile({
+          userId: id,
+          summary,
+          location,
+          mobile,
+          fullName,
+          avatar:publicPath,
+        })
+      );
+        })
+        .catch((e) => {
+       dispatch(
+        editProfile(e)
+      );
+        })
+  
   };
   return (
     <>
@@ -58,13 +77,20 @@ export default function ProfileModal({ profileInfo }) {
               <div className="modal-body">
                 <ul className="list-group text-start">
                   <li className="list-group-item list-group-item-danger">
-                    <label className="form-label text-primary me-2" htmlFor="summary-text">
+                    <label
+                      className="form-label text-primary me-2"
+                      htmlFor="summary-text"
+                    >
                       summary:
                     </label>
-                    <textarea {...register("summary")} className="p-2" id="summary-text" name="summary" rows="4" cols="50">
-                 
-                    </textarea>
-           
+                    <textarea
+                      {...register("summary")}
+                      className="p-2"
+                      id="summary-text"
+                      name="summary"
+                      rows="4"
+                      cols="50"
+                    ></textarea>
                   </li>
                   <li className="list-group-item list-group-item-warning">
                     <label className="form-label text-primary me-2">
@@ -83,6 +109,25 @@ export default function ProfileModal({ profileInfo }) {
                       location:
                     </label>
                     <input {...register("location")} />
+                  </li>
+                  <li className="list-group-item list-group-item-warning">
+                    <label
+                      className="form-label text-primary mb-0"
+                      htmlFor="inputGroupFile04"
+                    >
+                      change profile image:
+                    </label>
+                    <div className="input-group mb-3">
+                      <label className="input-group-text" htmlFor="inputGroupFile01">
+                        Upload
+                      </label>
+                      <input
+                      {...register("avatar")}
+                        type="file"
+                        className="form-control"
+                        id="inputGroupFile01"
+                      />
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -109,3 +154,8 @@ export default function ProfileModal({ profileInfo }) {
     </>
   );
 }
+/////////The FormData interface provides a way to easily
+///construct a set of key/value pairs representing form fields and their values,
+// which can then be easily sent using the fetch() or XMLHttpRequest.send() method.
+// It uses the same format a form would use if the encoding type were set to
+////"multipart/form-data"

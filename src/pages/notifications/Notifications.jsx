@@ -16,58 +16,44 @@ export default function Notifications() {
             <div className="card-header p-3">
               <h5 className="mb-0">Alerts</h5>
             </div>
+               {/* start notif */}
             <div className="card-body p-3 pb-0">
-              <div className="alert alert-primary alert-dismissible text-white" role="alert">
-                <span className="text-sm">A simple primary alert with <a href="javascript:;" className="alert-link text-white">an example link</a>. Give it a click if you like.</span>
-                <button type="button" className="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div className="alert alert-secondary alert-dismissible text-white" role="alert">
-                <span className="text-sm">A simple secondary alert with <a href="javascript:;" className="alert-link text-white">an example link</a>. Give it a click if you like.</span>
-                <button type="button" className="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div className="alert alert-success alert-dismissible text-white" role="alert">
-                <span className="text-sm">A simple success alert with <a href="javascript:;" className="alert-link text-white">an example link</a>. Give it a click if you like.</span>
-                <button type="button" className="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
+           
               <div className="alert alert-danger alert-dismissible text-white" role="alert">
-                <span className="text-sm">A simple danger alert with <a href="javascript:;" className="alert-link text-white">an example link</a>. Give it a click if you like.</span>
+                <span className="text-sm">A simple danger alert with <a href="/:;" className="alert-link text-white">an example link</a>. Give it a click if you like.</span>
                 <button type="button" className="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div className="alert alert-warning alert-dismissible text-white" role="alert">
-                <span className="text-sm">A simple warning alert with <a href="javascript:;" className="alert-link text-white">an example link</a>. Give it a click if you like.</span>
+                <span className="text-sm">A simple warning alert with <a href="/:;" className="alert-link text-white">an example link</a>. Give it a click if you like.</span>
                 <button type="button" className="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div className="alert alert-info alert-dismissible text-white" role="alert">
-                <span className="text-sm">A simple info alert with <a href="javascript:;" className="alert-link text-white">an example link</a>. Give it a click if you like.</span>
+                <span className="text-sm">A simple info alert with <a href="/:;" className="alert-link text-white">an example link</a>. Give it a click if you like.</span>
                 <button type="button" className="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div className="alert alert-light alert-dismissible text-white" role="alert">
-                <span className="text-sm">A simple light alert with <a href="javascript:;" className="alert-link text-white">an example link</a>. Give it a click if you like.</span>
+                <span className="text-sm">A simple light alert with <a href="/:;" className="alert-link text-white">an example link</a>. Give it a click if you like.</span>
                 <button type="button" className="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div className="alert alert-dark alert-dismissible text-white" role="alert">
-                <span className="text-sm">A simple dark alert with <a href="javascript:;" className="alert-link text-white">an example link</a>. Give it a click if you like.</span>
+                <span className="text-sm">A simple dark alert with <a href="/:;" className="alert-link text-white">an example link</a>. Give it a click if you like.</span>
                 <button type="button" className="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
             </div>
+               {/* end notif */}
           </div>
           <div className="card mt-4">
+         
             <div className="card-header p-3">
               <h5 className="mb-0">Notifications</h5>
               <p className="text-sm mb-0">
@@ -75,6 +61,7 @@ export default function Notifications() {
           ">here</a>.
               </p>
             </div>
+         
             <div className="card-body p-3">
               <div className="row">
                 <div className="col-lg-3 col-sm-6 col-12">

@@ -9,7 +9,6 @@ import { get, patch } from "../../utils/httpclient/HttpClient";
 export const fetchProjects = createAsyncThunk(
   "projects/fetchprojects",
   async () => {
-    // throw new Error("something went wrong")
     const response = await get("projects");
     return response;
   }

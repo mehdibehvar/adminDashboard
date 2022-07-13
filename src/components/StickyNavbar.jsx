@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function StickyNavbar() {
   return (
@@ -19,33 +20,28 @@ export default function StickyNavbar() {
             <div className="collapse navbar-collapse" id="navigation">
               <ul className="navbar-nav mx-auto">
                 <li className="nav-item">
-                  <a className="nav-link d-flex align-items-center me-2 active" aria-current="page" href="../pages/dashboard.html">
+                  <Link to={"/"} className="nav-link d-flex align-items-center me-2 active" aria-current="page">         
                     <i className="fa fa-chart-pie opacity-6 text-dark me-1"></i>
                     Dashboard
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link me-2" href="../pages/profile.html">
-                    <i className="fa fa-user opacity-6 text-dark me-1"></i>
+                  <Link to={"/profile"} className="nav-link me-2">
+                  <i className="fa fa-user opacity-6 text-dark me-1"></i>
                     Profile
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link me-2" href="../pages/sign-up.html">
+                  <Link to={"/signup"} className="nav-link me-2">
                     <i className="fas fa-user-circle opacity-6 text-dark me-1"></i>
                     Sign Up
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link me-2" href="../pages/sign-in.html">
+                  <Link to={"/signin"} className="nav-link me-2">
                     <i className="fas fa-key opacity-6 text-dark me-1"></i>
                     Sign In
-                  </a>
-                </li>
-              </ul>
-              <ul className="navbar-nav d-lg-block d-none">
-                <li className="nav-item">
-                  <a href="https://www.creative-tim.com/product/material-dashboard" className="btn btn-sm mb-0 me-1 bg-gradient-dark">Free download</a>
+                  </Link>       
                 </li>
               </ul>
             </div>

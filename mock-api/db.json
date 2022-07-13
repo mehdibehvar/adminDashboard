@@ -9,25 +9,75 @@
         3,
         6
       ],
-      "mobile": "0990945444",
+      "avatar": "uploaded\\1657743475627-coronokid.jpg",
+      "mobile": "099094577777",
       "password": 123456,
       "email": "mehdi@gmail.com",
       "fullName": "مهدی بهور",
-      "summary": "hi i am mehdi behvar i am 34 years old and i am react develoaper."
+      "summary": "hi i am mehdi behvar i am 34 years old and i am react develoaper.i ........"
     },
     {
       "id": 2,
-      "location": "yasuj",
+      "location": "yasuj33",
       "projects": [
         1,
         2,
         3
       ],
+      "avatar": "uploaded\\1657742900542-team-4.jpg",
       "mobile": " (44) 123 1234 888",
       "email": "admin@gmail.com",
       "fullName": "admin admin",
       "password": 123456,
       "summary": "Hi, I’m Alec Thompson, Decisions: If you can’t decide,the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)"
+    },
+    {
+      "fullName": "test11",
+      "email": "test11@gmail.com",
+      "password": "test1234",
+      "projects": [
+        1,
+        4,
+        2,
+        6
+      ],
+      "avatar": "../assets/img/teams/team-4.jpg",
+      "id": 3,
+      "summary": "Text messages are used for personal, family, business and social purposes. Governmental and non-governmental organizations use text messaging for communication between colleagues. In the 2010s, the sending of short informal messages became an accepted part of many cultures, as happened earlier with emailing.[1] This makes texting a quick and",
+      "mobile": "09996666",
+      "location": "usa"
+    },
+    {
+      "fullName": "new user",
+      "email": "newuser@gmail.com",
+      "password": "123456",
+      "projects": [
+        1,
+        4,
+        2,
+        6
+      ],
+      "id": 4,
+      "summary": "hi i am new user -i am 33 years old",
+      "location": "yasuj7",
+      "mobile": "1234-7777",
+      "avatar": "1657738008243-eqc_ltt_068.jpg"
+    },
+    {
+      "fullName": "shaghayegh ",
+      "email": "shaghayegh@gmail.com",
+      "password": "3333333333333",
+      "projects": [
+        1,
+        4,
+        2,
+        6
+      ],
+      "id": 5,
+      "summary": "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+      "location": "yasuj",
+      "mobile": "09998888888",
+      "avatar": "uploaded\\1657743044202-team-5.jpg"
     }
   ],
   "projects": [
@@ -53,7 +103,7 @@
         }
       ],
       "budget": "$14,000",
-      "status": "cancel",
+      "status": "doned",
       "completion": 100,
       "logo": "../assets/img/small-logos/logo-xd.svg",
       "image": "../assets/img/home-decor-1.jpg",
@@ -132,7 +182,7 @@
         }
       ],
       "budget": "$3,000",
-      "status": "doned",
+      "status": "working",
       "completion": 100,
       "logo": "../assets/img/small-logos/logo-atlassian.svg",
       "image": "../assets/img/home-decor-1.jpg",

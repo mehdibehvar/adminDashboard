@@ -19,7 +19,7 @@ export function post(url, data, config) {
     .post(url, data, config)
     .then((response) => response.data)
     .catch((error) => {
-      throw new Error(error.message);
+      console.log(error);
     });
 }
 export function del(url, config = {}) {

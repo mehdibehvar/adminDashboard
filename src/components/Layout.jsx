@@ -1,6 +1,6 @@
 import Navbar from "./navbar/Navbar";
 import Sidebar from "./Sidebar";
-
+import Setting from "./setting/Setting"
 export default function Layout({children}) {
   return (
   <>
@@ -9,6 +9,7 @@ export default function Layout({children}) {
     <Navbar/>
     {children}
   </main>
+  <Setting/>
   </>
   )
 }

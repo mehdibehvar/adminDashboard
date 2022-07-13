@@ -4,8 +4,8 @@ import {patch} from "../../utils/httpclient";
 export const editProfile = createAsyncThunk(
   "user/editUserInfo",
   async (params, thunkAPI) => {
-    const {userId, summary, location, mobile, fullName } = params;
-   return await patch(`users/${userId}`,{summary, location, mobile, fullName });
+    const {userId, summary, location, mobile, fullName,avatar } = params;
+   return await patch(`users/${userId}`,{summary, location, mobile, fullName,avatar });
 
   }
 );
@@ -42,12 +42,12 @@ const userSlice = createSlice({
     state.loading=true
     })
     .addCase(editProfile.fulfilled,(state,action)=>{
-      console.table(action.payload);
 state.info=action.payload;
     state.loading=false
     })
-    .addCase(editProfile.rejected,(state)=>{
+    .addCase(editProfile.rejected,(state,action)=>{
     state.loading=false;
+    state.error=action.payload;
     })
   }
 });

@@ -57,7 +57,7 @@ export default function Profile() {
               <div className="col-auto">
                 <div className="avatar avatar-xl position-relative">
                   <img
-                    src="../assets/img/bruce-mars.jpg"
+                    src={`${profileInfo[0].avatar}`}
                     alt="profile_image"
                     className="w-100 border-radius-lg shadow-sm"
                   />
