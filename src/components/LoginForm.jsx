@@ -6,6 +6,7 @@ import { post } from "../utils/httpclient";
 import Loading from "./status/Loading";
 import Error from "./status/Error";
 import { useRef } from 'react';
+import handleStyle from "../customHooks/useHandleInputsStyle";
 
 export default function LoginForm() {
   const {error}=useSelector(state=>state.userInfo)
@@ -26,35 +27,6 @@ export default function LoginForm() {
       dispatch(loginError(error.message))
       }
     };
-    function handleFocus(e) {
-     const name=e.target.name;
-     if(name==="email"){
-      inputRefEmail.current.classList.add("is-filled");
-     }
-     if(name==="password"){
-      inputRefPassword.current.classList.add("is-filled");
-     }
-   
-      }
-      function handleFocuseOut(e) {
-        const name=e.target.name;
-     if(name==="email"){
-      inputRefEmail.current.classList.add("is-filled");
-     }
-     if(name==="password"){
-      inputRefPassword.current.classList.add("is-filled");
-     }
-        
-      }
-      function handleInputChange(e) {
-        const name=e.target.name;
-        if(name==="email"){
-         inputRefEmail.current.classList.add("is-filled");
-        }
-        if(name==="password"){
-         inputRefPassword.current.classList.add("is-filled");
-        }
-      }
 
     if(error){
       return <Error error={error}/>
@@ -63,13 +35,13 @@ export default function LoginForm() {
  <>   {loading?<Loading customStyle={"signin-loader"}/>:<form onSubmit={handleSubmit(handleLogin)}  className="text-start">
  <div ref={inputRefEmail} className="input-group input-group-outline my-3">
    <label className="form-label">Email</label>
-   <input onChange={(e)=>handleInputChange(e)} onBlur={(e)=>handleFocuseOut(e)}  onFocus={(e)=>handleFocus(e)} {...register("email",{required:true,pattern:/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/})} className="form-control"/>
+   <input onChange={(e)=>handleStyle(e,inputRefEmail)} onBlur={(e)=>handleStyle(e,inputRefEmail)}  onFocus={(e)=>handleStyle(e,inputRefEmail)} {...register("email",{required:true,pattern:/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/})} className="form-control"/>
    <span className="text-danger ">{errors.email?.type==="required"&& "email is required"}</span>
    <span className="text-danger ">{errors.email?.type==="pattern"&& "email format is wrong"}</span>
  </div>
  <div ref={inputRefPassword} className="input-group input-group-outline mb-3">
    <label className="form-label">Password</label>
-   <input onChange={(e)=>handleInputChange(e)} onBlur={(e)=>handleFocuseOut(e)}  onFocus={(e)=>handleFocus(e)} {...register("password",{required:true})} className="form-control"/>
+   <input onChange={(e)=>handleStyle(e,inputRefPassword)} onBlur={(e)=>handleStyle(e,inputRefPassword)}  onFocus={(e)=>handleStyle(e,inputRefPassword)} {...register("password",{required:true})} className="form-control"/>
 <span className="text-danger">{errors.password?.type==="required"&& "password is neccessary"}</span>
  </div>
  <div className="form-check form-switch d-flex align-items-center mb-3">

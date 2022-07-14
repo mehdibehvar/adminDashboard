@@ -78,6 +78,34 @@
       "location": "yasuj",
       "mobile": "09998888888",
       "avatar": "uploaded\\1657743044202-team-5.jpg"
+    },
+    {
+      "fullName": "scarface",
+      "email": "example121@gmail.com",
+      "password": "11111111111111111111",
+      "projects": [
+        1,
+        4,
+        2,
+        6
+      ],
+      "id": 6,
+      "summary": "sssssssffffffffffffffffffffsss",
+      "location": "dehdasht",
+      "mobile": "09995555555",
+      "avatar": "uploaded\\1657826742306-eqc_ltt_068.jpg"
+    },
+    {
+      "fullName": "مهدی بهور",
+      "email": "xxxxxxxx@example.com",
+      "password": "ssssssssssssssss",
+      "projects": [
+        1,
+        4,
+        2,
+        6
+      ],
+      "id": 7
     }
   ],
   "projects": [

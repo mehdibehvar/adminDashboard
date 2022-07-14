@@ -6,7 +6,12 @@ import {useNavigate} from "react-router-dom"
 import { loginError, loginRequest, loginSuccess } from "../../features/users/userSlice";
 import { post } from "../../utils/httpclient";
 import Loading from "../../components/status/Loading";
+import { useRef } from "react";
+import handleStyle from "../../customHooks/useHandleInputsStyle";
 export default function SignUp() {
+  const inputRefEmail=useRef();
+  const inputRefFullname=useRef();
+  const inputRefPassword=useRef();
   const {loading}=useSelector(state=>state.userInfo)
   const navigate=useNavigate()
   const dispatch=useDispatch()
@@ -45,20 +50,20 @@ export default function SignUp() {
                   {loading?<Loading customStyle={"signin-loader"}/>:<>
                   <form onSubmit={handleSubmit(handleSignUp)}>
                       <span className="text-danger m-0">{errors.fullName?.type==="required"&&"name is neccessary"}</span>
-                    <div className="input-group input-group-outline mb-3">
+                    <div ref={inputRefFullname}  className="input-group input-group-outline mb-3">
                       <label className="form-label">fullName</label>
-                      <input {...register("fullName",{required:true})} type="text" className="form-control"/>
+                      <input {...register("fullName",{required:true})} type="text" className="form-control"  onBlur={(e)=>handleStyle(e,inputRefFullname)}  onFocus={(e)=>handleStyle(e,inputRefFullname)}/>
                     </div>
                     <span className="text-danger m-0">{errors.email?.type==="required"&&"email is neccessary"}</span>
                     <span className="text-danger m-0">{errors.email?.type==="pattern"&&"email pattern is wrong"}</span>
-                    <div className="input-group input-group-outline mb-3">
+                    <div ref={inputRefEmail} className="input-group input-group-outline mb-3">
                       <label className="form-label">Email</label>
-                      <input {...register("email",{required:true,pattern:/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/})}  className="form-control"/>
+                      <input {...register("email",{required:true,pattern:/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/})}  onBlur={(e)=>handleStyle(e,inputRefEmail)}  onFocus={(e)=>handleStyle(e,inputRefEmail)}  className="form-control"/>
                     </div>
                     <span className="text-danger m-0">{errors.password?.type==="minLength"&&"password not strong"}</span>
-                    <div className="input-group input-group-outline mb-3">
+                    <div ref={inputRefPassword} className="input-group input-group-outline mb-3">
                       <label className="form-label">Password</label>
-                      <input {...register("password",{required:true,minLength:5})} type="password" className="form-control"/>
+                      <input {...register("password",{required:true,minLength:5})}  className="form-control"  onBlur={(e)=>handleStyle(e,inputRefPassword)}  onFocus={(e)=>handleStyle(e,inputRefPassword)}/>
                     </div>
                     <div className="form-check form-check-info text-start ps-0">
                       <input {...register("checkbox")} className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
