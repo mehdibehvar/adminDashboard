@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Charts from "../../components/charts/Charts";
 import Footer from "../../components/footer/Footer";
 import Loading from "../../components/status/Loading";
