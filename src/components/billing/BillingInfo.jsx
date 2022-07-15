@@ -1,9 +1,10 @@
 import { useSelector } from "react-redux"
-import { selectAllBilling } from "../../features/billingInfo/billingInfoSlice"
+import {  selectAllBillingsIds } from "../../features/billingInfo/billingInfoSlice"
+import { MemoizedBillingModal } from "../BillingModal";
 import Bill from "./Bill";
 
 export default function BillingInfo() {
-  const billings=useSelector(selectAllBilling);
+  const billingsIds=useSelector(selectAllBillingsIds);
   return (
     <div className="col-md-7 mt-4">
     <div className="card">
@@ -12,7 +13,8 @@ export default function BillingInfo() {
       </div>
       <div className="card-body pt-4 p-3">
         <ul className="list-group">
-         {billings.map(bill=><Bill key={bill.id} bill={bill}/>)}
+         {billingsIds.map(id=><Bill key={id} id={id}/>)}
+         <MemoizedBillingModal/>
         </ul>
       </div>
     </div>

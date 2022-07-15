@@ -1,8 +1,6 @@
 import useSeperateNumbers from "../../customHooks/useSeperateNumbers"
 
 const Cart = ({cart}) => {
-    const modifiedCartNumber=useSeperateNumbers(cart.number,4);
-    console.log(cart);
   return (
     <div key={cart.id} className="col-xl-6 mb-xl-0 mb-4">
     <div className="card bg-transparent shadow-xl">
@@ -11,7 +9,7 @@ const Cart = ({cart}) => {
         <span className="mask bg-gradient-dark opacity-10"></span>
         <div className="card-body position-relative z-index-1 p-3">
           <i className="material-icons text-white p-2">wifi</i>
-          <h5 className="text-white mt-4 mb-5 pb-2">{modifiedCartNumber}</h5>
+          <h5 className="text-white mt-4 mb-5 pb-2">{useSeperateNumbers(cart.number,4)}</h5>
           <div className="d-flex">
             <div className="d-flex">
               <div className="me-4">
