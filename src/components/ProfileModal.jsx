@@ -5,32 +5,34 @@ import { useDispatch } from "react-redux";
 import { editProfile } from "../features/users/userSlice";
 
 export default function ProfileModal({ profileInfo }) {
-  const { id, summary, location, mobile, fullName } = profileInfo;
-  const dispatch = useDispatch();
-  const { register, handleSubmit, setValue } = useForm();
+  const { id, summary, location, mobile, fullName,avatar }=profileInfo;
+  const prevAvatarPath=avatar;
+  const dispatch=useDispatch();
+  const { register, handleSubmit, setValue,formState:{errors} } = useForm();
   ///set value of form when component mount////
   useEffect(() => {
     setValue("summary", summary);
     setValue("location", location);
     setValue("mobile", mobile);
     setValue("fullName", fullName);
+
   }, []);
   ////edit profile info by a patch request/////
   const handleEditProfile = (inputs,e) => {
     e.preventDefault();
-    const { summary, location, mobile, fullName, avatar } = inputs;
+    const { summary, location, mobile, fullName, avatar} = inputs;
     const data = new FormData();
-
     for(let i = 0; i < avatar.length; i++) {
         data.append('file', avatar[i]);
     }
     axios.post('http://localhost:8000/upload', data)
         .then((response) => {
           const path=response.data[0].path;
-          const publicPath=path.slice(7)
+          const publicPath=avatar?path.slice(7):prevAvatarPath;
+console.log(publicPath);
       dispatch(
         editProfile({
-          userId: id,
+         userId:id,
           summary,
           location,
           mobile,
@@ -122,12 +124,13 @@ export default function ProfileModal({ profileInfo }) {
                         Upload
                       </label>
                       <input
-                      {...register("avatar")}
+                      {...register("avatar",{required:true})}
                         type="file"
                         className="form-control"
                         id="inputGroupFile01"
                       />
                     </div>
+                      <span>{errors.avatar?.type==="required"&&"upload your profile image"}</span>
                   </li>
                 </ul>
               </div>

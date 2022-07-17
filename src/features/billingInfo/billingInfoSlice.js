@@ -49,7 +49,6 @@ const billingSlice=createSlice({
             state.status="pending";
         })
         .addCase(deleteBilling.fulfilled,(state,action)=>{
-            console.log(action.payload);
             billingAdapter.removeOne(state,action.payload)
             state.status="success";
         })

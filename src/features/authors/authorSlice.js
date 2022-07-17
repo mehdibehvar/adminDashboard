@@ -10,7 +10,7 @@ export const fetchAuthors=createAsyncThunk(
 )
 const authorAdapter=createEntityAdapter();
 const initialState=authorAdapter.getInitialState({status:"idle"});
-export const {selectAll:selectAllAuthors}=authorAdapter.getSelectors(state=>state.authors);
+export const {selectAll:selectAllAuthors,selectById:selectAuthorById}=authorAdapter.getSelectors(state=>state.authors);
 const authorSlice=createSlice({
     name:"author",
     initialState,

@@ -5,7 +5,7 @@ export const editProfile = createAsyncThunk(
   "user/editUserInfo",
   async (params, thunkAPI) => {
     const {userId, summary, location, mobile, fullName,avatar } = params;
-   return await patch(`users/${userId}`,{summary, location, mobile, fullName,avatar });
+    return await patch(`users/${userId}`,{summary, location, mobile, fullName,avatar});
 
   }
 );
@@ -42,8 +42,8 @@ const userSlice = createSlice({
     state.loading=true
     })
     .addCase(editProfile.fulfilled,(state,action)=>{
-state.info=action.payload;
-    state.loading=false
+      state.info=action.payload;
+      state.loading=false
     })
     .addCase(editProfile.rejected,(state,action)=>{
     state.loading=false;

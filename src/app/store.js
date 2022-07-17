@@ -4,6 +4,7 @@ import billingSlice from '../features/billingInfo/billingInfoSlice';
 import cardSlice from '../features/cards/cardSlice';
 import chartsSlice from '../features/charts/chartsSlice';
 import filterSlice from '../features/filter/filterSlice';
+import notificationSlice from '../features/notifications/notificationSlice';
 import projectSlice from '../features/projects/projectSlice';
 import styleSlice from '../features/style/StyleSlice';
 import userSlice from '../features/users/userSlice';
@@ -16,6 +17,7 @@ export const store = configureStore({
  billings:billingSlice,
  filters:filterSlice,
  styles:styleSlice,
- charts:chartsSlice
+ charts:chartsSlice,
+ notifications:notificationSlice
   },
 });
