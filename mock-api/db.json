@@ -9,7 +9,7 @@
         3,
         6
       ],
-      "avatar": "uploaded\\1657999218559-coronokid.jpg",
+      "avatar": "uploaded\\1658249958014-coronokid.jpg",
       "mobile": "099094577777",
       "password": 123456,
       "email": "mehdi@gmail.com",
@@ -525,6 +525,50 @@
       "time": "7/7/2022",
       "type": "alert",
       "status": "info"
+    }
+  ],
+  "conversations": [
+    {
+      "id": 1,
+      "message": "Hi! I need more information..",
+      "replay": "hiiiiiiiiiiiiiiiiiiiiiiiiii",
+      "image": "uploaded\\1658249958014-coronokid.jpg",
+      "name": "mehrad"
+    },
+    {
+      "id": 2,
+      "message": "Hi! I need more information..",
+      "replay": "hi sophi i will send .......................",
+      "image": "../assets/img/marie.jpg",
+      "name": "sophi .b"
+    },
+    {
+      "id": 3,
+      "message": "Hi! I need more information..",
+      "replay": "",
+      "image": "../assets/img/ivana-square.jpg",
+      "name": "Anne Marie"
+    },
+    {
+      "id": 4,
+      "message": "Hi! I need more information..",
+      "replay": "",
+      "image": "../assets/img/teams/team-4.jpg",
+      "name": "Ivanna"
+    },
+    {
+      "id": 5,
+      "message": "Hi! I need more information..",
+      "replay": "",
+      "image": "../assets/img/teams/team-3.jpg",
+      "name": "peterson"
+    },
+    {
+      "id": 6,
+      "message": "Hi! I need more information..",
+      "replay": "i willl seeeeeeeeeeeeeeeeee you tomorrowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+      "image": "../assets/img/teams/team-3.jpg",
+      "name": "jack martin"
     }
   ]
 }

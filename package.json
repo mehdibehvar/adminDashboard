@@ -37,7 +37,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "json-server": "json-server --watch ./mock-api/db.json --port 6060",
-    "dev": "concurrently \"npm start\" \"npm run json-server\"",
+    "dev": "concurrently \"npm start\" \"npm run json-server\" \"npm run server\"",
     "server": "node ./server"
   },
   "eslintConfig": {

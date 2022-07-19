@@ -19,7 +19,9 @@ export default function Setting() {
     dispatch(changeSidebarColor(e.target.dataset.color))
   }
   const handleNavbarFixed=()=>{
-dispatch(toggleNavbarFixed())
+    if (window.innerWidth>=1200){
+      dispatch(toggleNavbarFixed())
+    }
   }
   const handleSidenavBg=(e)=>{
     dispatch(changeSidenavBg(e.target.dataset.classname))
@@ -68,7 +70,7 @@ dispatch(toggleNavbarFixed())
           <button className="btn bg-gradient-dark px-3 mb-2 ms-2" data-classname="bg-transparent">Transparent</button>
           <button className="btn bg-gradient-dark px-3 mb-2 ms-2" data-classname="bg-white">White</button>
         </div>
-        <p className="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
+        <p className="text-sm d-xl-none text-success d-block mt-2">You can change the Navbar Fixed just on desktop view.</p>
   
         <div className="mt-3 d-flex">
           <h6 className="mb-0">Navbar Fixed</h6>

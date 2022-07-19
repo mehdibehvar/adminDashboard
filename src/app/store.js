@@ -3,6 +3,7 @@ import authorSlice from '../features/authors/authorSlice';
 import billingSlice from '../features/billingInfo/billingInfoSlice';
 import cardSlice from '../features/cards/cardSlice';
 import chartsSlice from '../features/charts/chartsSlice';
+import conversationSlice from '../features/conversation/conversationSlice';
 import filterSlice from '../features/filter/filterSlice';
 import notificationSlice from '../features/notifications/notificationSlice';
 import projectSlice from '../features/projects/projectSlice';
@@ -18,6 +19,7 @@ export const store = configureStore({
  filters:filterSlice,
  styles:styleSlice,
  charts:chartsSlice,
- notifications:notificationSlice
+ notifications:notificationSlice,
+ conversations:conversationSlice
   },
 });

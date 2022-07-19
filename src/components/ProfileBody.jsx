@@ -1,4 +1,4 @@
-import Conversations from "./Conversations";
+import Conversations from "./conversation/Conversations";
 import ProfileInfo from "./ProfileInfo";
 import PlatformSetting from "./PlatformSetting";
 import UserProjects from "./UserProjects";
