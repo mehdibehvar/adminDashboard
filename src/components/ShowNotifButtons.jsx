@@ -14,7 +14,6 @@ export default function ShowNotifButtons() {
             setShowNotifList([]);
          },10000);
     }
-    console.log(moment().format());
   return (
     <div className="card mt-4">
       <div className="card-header p-3">

@@ -84,8 +84,6 @@ dispatch(toggleNavbarFixed())
           </div>
         </div>
         <hr className="horizontal dark my-sm-4"/>
-        <a className="btn bg-gradient-info w-100" href="https://www.creative-tim.com/product/material-dashboard-pro">Free Download</a>
-        <a className="btn btn-outline-dark w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard">View documentation</a>
      
       </div>
     </div>

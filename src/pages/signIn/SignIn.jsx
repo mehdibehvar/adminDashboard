@@ -19,17 +19,17 @@ export default function SignIn() {
                   <h4 className="text-white font-weight-bolder text-center mt-2 mb-0">Sign in</h4>
                   <div className="row mt-3">
                     <div className="col-2 text-center ms-auto">
-                      <a className="btn btn-link px-3" href="/">
+                      <a className="btn btn-link px-3" href="https://facebook.com">
                         <i className="fa fa-facebook text-white text-lg"></i>
                       </a>
                     </div>
                     <div className="col-2 text-center px-1">
-                      <a className="btn btn-link px-3" href="/">
+                      <a className="btn btn-link px-3" href="https://github.com">
                         <i className="fa fa-github text-white text-lg"></i>
                       </a>
                     </div>
                     <div className="col-2 text-center me-auto">
-                      <a className="btn btn-link px-3" href="/">
+                      <a className="btn btn-link px-3" href="https://myaccount.google.com">
                         <i className="fa fa-google text-white text-lg"></i>
                       </a>
                     </div>

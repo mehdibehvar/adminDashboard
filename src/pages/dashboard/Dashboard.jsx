@@ -4,10 +4,9 @@ import Footer from "../../components/footer/Footer";
 import Loading from "../../components/status/Loading";
 import Navbar from "../../components/navbar/Navbar";
 import Projects from "../../components/projects/Projects";
-import Sidebar from "../../components/Sidebar";
 import Widgets from "../../components/widgets/Widgets";
 import Error from "../../components/status/Error";
-import Setting from "../../components/setting/Setting"
+import Layout from "../../components/Layout";
 
 
 export default function Dashboard() {
@@ -16,12 +15,8 @@ export default function Dashboard() {
   if(status==="rejected"){
     return <Error/>
   }
-  return (
-    <>
-      <Sidebar />
-      <main className="main-content position-relative  max-height-vh-100 h-100 border-radius-lg ">
-        <Navbar />
-        {status === "pending" ? (
+  return (<Layout>
+{status === "pending" ? (
           <Loading />
         ) : (
           <>
@@ -34,9 +29,8 @@ export default function Dashboard() {
             </div>
           </>
         )}
-      </main>
-         <Setting/>
+</Layout>
      
-    </>
+
   );
 }
