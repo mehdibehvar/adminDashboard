@@ -19,7 +19,7 @@ export default function Dashboard() {
   return (
     <>
       <Sidebar />
-      <main className="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+      <main className="main-content position-relative  max-height-vh-100 h-100 border-radius-lg ">
         <Navbar />
         {status === "pending" ? (
           <Loading />

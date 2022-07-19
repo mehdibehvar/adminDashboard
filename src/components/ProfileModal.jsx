@@ -29,7 +29,6 @@ export default function ProfileModal({ profileInfo }) {
         .then((response) => {
           const path=response.data[0].path;
           const publicPath=avatar?path.slice(7):prevAvatarPath;
-console.log(publicPath);
       dispatch(
         editProfile({
          userId:id,

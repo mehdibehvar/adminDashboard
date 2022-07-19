@@ -1,3 +1,4 @@
+import moment from "moment";
 import {Link} from "react-router-dom"
 import useFetchNotifInfo from "../../customHooks/useFetchNotifInfo";
 import Loading from "../status/Loading";
@@ -21,7 +22,7 @@ if(loading){
           </h6>
           <p className="text-xs text-secondary mb-0">
             <i className="fa fa-clock me-1"></i>
-            {notifInfo.time}
+            {moment(notifInfo.time).startOf('hour').fromNow()}
           </p>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import {Link,useNavigate} from "react-router-dom"
-import {useForm} from "react-hook-form"
+import {Controller, useForm} from "react-hook-form"
 import { useDispatch,useSelector } from "react-redux";
 import { loginError, loginRequest, loginSuccess } from "../features/users/userSlice";
 import { post } from "../utils/httpclient";
@@ -7,8 +7,7 @@ import Loading from "./status/Loading";
 import Error from "./status/Error";
 import { useRef } from 'react';
 import handleStyle from "../customHooks/useHandleInputsStyle";
-
-export default function LoginForm() {
+  export default function LoginForm() {
   const {error}=useSelector(state=>state.userInfo)
     const {register,handleSubmit,formState:{errors}}=useForm();
     const inputRefEmail=useRef();
@@ -16,8 +15,10 @@ export default function LoginForm() {
     const dispatch=useDispatch();
     const {loading}=useSelector(state=>state.userInfo);
     const navigate=useNavigate();
+    ////handle login function/////
     const handleLogin=async (inputs)=>{
-     const {email,password}=inputs;
+     const {email,password,ReactDatepicker}=inputs;
+     console.log(ReactDatepicker);
      dispatch(loginRequest())
       try {
         const response=await post("https://demo.treblle.com/api/v1/auth/login",{email,password});
@@ -45,6 +46,7 @@ export default function LoginForm() {
 <span className="text-danger">{errors.password?.type==="required"&& "password is neccessary"}</span>
  </div>
  <div className="form-check form-switch d-flex align-items-center mb-3">
+
    <input {...register("checkInput")} type="checkbox" id="rememberMe"/>
    <label className="form-check-label mb-0 ms-3" htmlFor="rememberMe">Remember me</label>
  </div>

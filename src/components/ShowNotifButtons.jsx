@@ -1,3 +1,4 @@
+import moment from "moment";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { selectAllNotifications } from "../features/notifications/notificationSlice";
@@ -13,6 +14,7 @@ export default function ShowNotifButtons() {
             setShowNotifList([]);
          },10000);
     }
+    console.log(moment().format());
   return (
     <div className="card mt-4">
       <div className="card-header p-3">
@@ -66,7 +68,7 @@ export default function ShowNotifButtons() {
       {/* notifications wrapper */}
       <div className="position-fixed bottom-1 end-1 z-index-2">
         {showNotifList.map(notif=>  <div  key={notif.id}
-          className={`toast fade show p-2 ${notif.status==="info"?"bg-gradient-info":"white"}`}
+          className={`toast fade ${notif.status==="info"?"text-white":"text-body"} show p-2 ${notif.status==="info"?"bg-gradient-info":"white"}`}
           role="alert"
           aria-live="assertive"
           id={`${notif.status}Toast`}
@@ -78,7 +80,7 @@ export default function ShowNotifButtons() {
             <span className={`me-auto font-weight-bold ${notif.status==="info"&&"text-white"}`}>
               Material Dashboard{" "}
             </span>
-            <small className="text-body">{notif.time}</small>
+            <small className={`${notif.status==="info"?"text-white":""}`}>{moment(notif.time).startOf('hour').fromNow()}</small>
             <i
               className="fas fa-times text-md ms-3 cursor-pointer"
               data-bs-dismiss="toast"

@@ -10,8 +10,8 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import useTaskChartsOptions from "../../customHooks/usetaskchartoptions";
 import Loading from "../status/Loading";
+import { taskChartOptions } from "../../utils/data";
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -24,7 +24,7 @@ ChartJS.register(
 export default function TasksCharts() {
   const {chartsData,status}=useSelector(state=>state.charts);
   const data=chartsData[2];
-  const options = useTaskChartsOptions();
+  const options = taskChartOptions;
   if(status==="pending"){
     return <Loading/>
   }
