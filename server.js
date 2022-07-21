@@ -1,3 +1,4 @@
+// this server is for uploading profile image
 const express = require('express');
 const multer = require('multer');
 const cors = require('cors');
