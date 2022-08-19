@@ -21,8 +21,8 @@ dispatch(ChangeFilterStatus(e.target.innerText))
           <a className="cursor-pointer" href="/" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
             <i className="fa fa-ellipsis-v text-secondary"></i>
           </a>
-          <ul onClick={(e)=>handleChangeFilter(e)}  className="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-            <li ><span className="dropdown-item border-radius-md">show completed</span></li>
+          <ul onClick={(e)=>handleChangeFilter(e)} data-testid="projectsHandler"  className="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
+            <li  ><span className="dropdown-item border-radius-md">show completed</span></li>
             <li><span className="dropdown-item border-radius-md" >ascending progress</span></li>
             <li><span className="dropdown-item border-radius-md" >descending progress</span></li>
           </ul>

@@ -34,7 +34,7 @@ export default function Project({projectId}) {
           </div>
         </div>
         <div className="progress">
-          <div className={`progress-bar bg-gradient-${completion===100?"success":"info"} w-${completion}`} role="progressbar" aria-valuenow={completion} aria-valuemin="0" aria-valuemax="100"></div>
+          <div data-testid="progbar" className={`progress-bar bg-gradient-${completion===100?"success":"info"} w-${completion}`} role="progressbar" aria-valuenow={completion} aria-valuemin="0" aria-valuemax="100"></div>
         </div>
       </div>
     </td>

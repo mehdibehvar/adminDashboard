@@ -9,7 +9,6 @@ import Billing from "./pages/billing/Billing";
 import Notifications from "./pages/notifications/Notifications";
 import Tables from "./pages/tables/Tables";
 import { useDispatch } from "react-redux";
-import { fetchProjects } from './features/projects/projectSlice';
 import SingleProject from "./pages/singleProject/SingleProject";
 
 function App() {

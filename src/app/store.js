@@ -15,7 +15,7 @@ export const store = configureStore({
  userInfo:userSlice,
  authors:authorSlice,
  cards:cardSlice,
- billings:billingSlice,
+ billings:billingSlice, 
  filters:filterSlice,
  styles:styleSlice,
  charts:chartsSlice,

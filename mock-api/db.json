@@ -9,7 +9,7 @@
         3,
         6
       ],
-      "avatar": "uploaded\\1658407215898-coronokid.jpg",
+      "avatar": "uploaded\\1660492917842-eqc_ltt_068.jpg",
       "mobile": "0990945xxxx",
       "password": 123456,
       "email": "mehdi@gmail.com",
@@ -24,10 +24,10 @@
         2,
         3
       ],
-      "avatar": "uploaded\\1658065632907-eqc_ltt_068.jpg",
-      "mobile": " (44) 123 1234 888f",
+      "avatar": "uploaded\\1660909601336-eqc_ltt_068.jpg",
+      "mobile": "123 1234 888f",
       "email": "admin@gmail.com",
-      "fullName": "admin -admin",
+      "fullName": "mehdi behvar",
       "password": 123456,
       "summary": "Hi, I’m Alec Thompson, Decisions: If you can’t decide,the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)"
     },
@@ -130,7 +130,7 @@
       ],
       "budget": "NoSet",
       "status": "working",
-      "completion": 10,
+      "completion": 70,
       "logo": "../assets/img/small-logos/logo-slack.svg",
       "image": "../assets/img/home-decor-3.jpg",
       "type": "Minimalist",
@@ -158,8 +158,8 @@
         }
       ],
       "budget": "NoSet",
-      "status": "working",
-      "completion": 75,
+      "status": "doned",
+      "completion": 100,
       "logo": "../assets/img/small-logos/logo-slack.svg",
       "image": "https://images.unsplash.com/photo-1606744824163-985d376605aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "type": "Gothic",
@@ -179,7 +179,7 @@
         }
       ],
       "budget": "$3,000",
-      "status": "working",
+      "status": "doned",
       "completion": 100,
       "logo": "../assets/img/small-logos/logo-atlassian.svg",
       "image": "../assets/img/home-decor-1.jpg",
@@ -200,8 +200,8 @@
         }
       ],
       "budget": "$3,000",
-      "status": "doned",
-      "completion": 100,
+      "status": "working",
+      "completion": 80,
       "logo": "../assets/img/small-logos/logo-atlassian.svg",
       "image": "../assets/img/home-decor-2.jpg",
       "type": "Modern",
@@ -221,8 +221,8 @@
         }
       ],
       "budget": "$3,000",
-      "status": "working",
-      "completion": 10,
+      "status": "doned",
+      "completion": 100,
       "logo": "../assets/img/small-logos/logo-atlassian.svg",
       "image": "../assets/img/home-decor-2.jpg",
       "type": "Modern",
@@ -346,20 +346,6 @@
   ],
   "billing": [
     {
-      "id": 1,
-      "fullName": "mehdi behvar1",
-      "CompanyName": "Fiber Notion2",
-      "EmailAddress": "lucas2@stone-tech.com",
-      "VATNumber": " FRB1235476"
-    },
-    {
-      "id": 2,
-      "fullName": "mehdi behvar2",
-      "CompanyName": "Fiber Notion2",
-      "EmailAddress": "lucas2@stone-tech.com",
-      "VATNumber": " FRB1235476"
-    },
-    {
       "id": 3,
       "fullName": "mehdi behvar3",
       "CompanyName": "Fiber Notion777",
@@ -367,16 +353,9 @@
       "VATNumber": " FRB1235476"
     },
     {
-      "id": 4,
-      "fullName": "mehdi behvar4",
-      "CompanyName": "Fiber Notion6",
-      "EmailAddress": "lucas6@stone-tech.com",
-      "VATNumber": " FRB1235476"
-    },
-    {
-      "id": 5,
-      "fullName": "mehdi behvar5",
-      "CompanyName": "Fiber Notion6",
+      "id": 2,
+      "fullName": "mehdi behvar3",
+      "CompanyName": "Fiber Notion777",
       "EmailAddress": "lucas6@stone-tech.com",
       "VATNumber": " FRB1235476"
     }
@@ -513,32 +492,11 @@
       "type": "message"
     },
     {
-      "id": 4,
-      "title": "danger danger /danger.......xxxxxxxxxx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "time": "1/7/2022",
-      "type": "alert",
-      "status": "danger"
-    },
-    {
-      "id": 7,
-      "title": "a new bug in .........",
-      "time": "1/2/2022",
-      "type": "alert",
-      "status": "warning"
-    },
-    {
       "id": 8,
       "title": "the payment number 1 successfully",
       "time": "2022-07-17T16:56:30+04:30",
       "type": "alert",
       "status": "success"
-    },
-    {
-      "id": 9,
-      "title": "A simple warning alert with",
-      "time": "7/15/2022",
-      "type": "alert",
-      "status": "info"
     },
     {
       "id": 10,
@@ -573,7 +531,7 @@
     {
       "id": 4,
       "message": "Hi! I need more information..",
-      "replay": "",
+      "replay": "wwwwwwwww",
       "image": "../assets/img/teams/team-4.jpg",
       "name": "Ivanna"
     },

@@ -32,7 +32,7 @@ newCompletion
         <p className="text-sm font-weight-bold mb-0">${budget}</p>
       </td>
       <td>
-        <span className="text-xs font-weight-bold">{status}</span>
+        <span data-testid="status" className="text-xs font-weight-bold">{status}</span>
       </td>
       <td className="align-middle text-center">
         <div className="d-flex align-items-center justify-content-center">
@@ -52,11 +52,11 @@ newCompletion
       </td>
       <td className="align-middle">
       <div  className="dropdown  pe-4">
-          <span className="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
-            <i className="fa fa-ellipsis-v text-secondary"></i>
+          <span  className="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
+            <i data-testid="statuslist" className="fa fa-ellipsis-v text-secondary"></i>
           </span>
-          <ul onClick={(e)=>handleChangeStatus(e)} className="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-            <li ><span className="dropdown-item border-radius-md">doned</span></li>
+          <ul  onClick={(e)=>handleChangeStatus(e)} className="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
+            <li  ><span  className="dropdown-item border-radius-md">doned</span></li>
             <li><span className="dropdown-item border-radius-md" >cancel</span></li>
             <li><span className="dropdown-item border-radius-md" >working</span></li>
           </ul>

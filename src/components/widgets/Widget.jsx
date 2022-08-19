@@ -55,7 +55,7 @@ export default function Widget({type}) {
           <i className="material-icons opacity-10">{widgetData.icon}</i>
         </div>
         <div className="text-end pt-1">
-          <p className="text-sm mb-0 text-capitalize">{widgetData.title}</p>
+          <p  className="text-sm mb-0 text-capitalize">{widgetData.title}</p>
           <h4 className="mb-0">{type==="today-money"||type==="sales"?"$":null} {useModifiedNumbers(widgetData.value)}</h4>
         </div>
       </div>

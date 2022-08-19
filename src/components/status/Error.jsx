@@ -7,7 +7,7 @@ export default function Error({error}) {
         <span className="material-icons text-primary">
         warning
         </span>
-        <p>{error?error:"something went wrong"}</p>
+        <p >{error?error:"something went wrong"}</p>
  </div>
 </div>
 
